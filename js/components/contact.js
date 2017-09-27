@@ -6,13 +6,14 @@ import {Link} from 'react-router';
 export default function Contact(props) {
     return (
         <div>
-            <strong>
+            <nav> 
                 <Link to={'/contacts/' + props.id}>
                     {props.name}
                 </Link>
-            </strong>
-            &nbsp;
-            {props.phoneNumber}
+            </nav>
+            <main>
+            <h1>Content from props: {props.phoneNumber}</h1>
+            </main>
         </div>
     );
 };
