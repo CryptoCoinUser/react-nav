@@ -1,20 +1,12 @@
 import React from 'react';
+import Navbar from  './navbar';
+
 
 export default function App(props) {
     return (
         <div>
-            <nav>
-                <span>
-                    Logo
-                </span>
-                <div> nav links go here
-                    {props.children}
-                    end nav links
-                </div>
-            </nav>
-            <main>
-                other components go here
-            </main>
+            <Navbar links={props.children} />
+            
         </div>
     );
 };

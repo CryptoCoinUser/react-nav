@@ -6,11 +6,12 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import ContactListContainer from './components/contact-list-container';
 import App from './components/app';
 import ContactContainer from './components/contact-container';
+import Navbar from './components/navbar'
 
 const routes = (
     <Router history={hashHistory}>
-        <Route path="/contacts" component={App}>
-            <IndexRoute component={ContactListContainer} />
+        <Route path="/contacts" component={Navbar} >
+          	<IndexRoute component={ContactListContainer} />
             <Route path=":contactId" component={ContactContainer} />
         </Route>
     </Router>
